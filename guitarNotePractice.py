@@ -13,19 +13,18 @@ def printOptions():
     print " 4 Some advice"
     print " 0 Quit\n"
 
-def printNote():
-    print "The note of the day is {0}\n".format(noteOfDay)
+def getNote():
+    return('ABCDEFG'[r.randint(0,6)])
+
+def printNote(note):
+    print "The note of the day is {0}\n".format(note)
 
 def printError():
     print "\nInvalid entry, try again"
     printOptions()
 
-def getNote():
-    return('ABCDEFG'[r.randint(0,6)])
-
-def getUserOptions():
+def getUserOptions(note):
     printOptions()
-    note = getNote()
     while(True):
         try:
             userInput = int(input( "Enter your selection:\n"))
@@ -45,6 +44,8 @@ def getUserOptions():
         else:
             printError()
 
+
+note = getNote()
 printTitle()
-printNote()
-getUserOptions()
+printNote(note)
+getUserOptions(note)
