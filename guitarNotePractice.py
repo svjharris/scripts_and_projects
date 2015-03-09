@@ -1,4 +1,4 @@
-# Written by Shannon svjharris@gmail.com 2015/03/08
+
 import random as r
 
 notes = ['A','B','C','D','E','F','G']
